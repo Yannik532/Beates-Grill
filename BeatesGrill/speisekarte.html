@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Speisekarte von Beate's Grill - Currywurst, Schnitzel, Hamburger, Pommes und mehr. Aktuelle Preise und Angebote." />
+  <meta name="keywords" content="Speisekarte, Preise, Currywurst, Schnitzel, Hamburger, Imbiss Lünen" />
+  
+  <title>Speisekarte | Beate's Grill - Aktuelle Preise</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <style>
+    /* Elegantes Restaurant-Design */
+    :root {
+      --primary-gold: #FF8C00;
+      --dark-bg: #1a1a1a;
+      --darker-bg: #0f0f0f;
+      --text-light: #f5f5f5;
+      --text-gold: #FF8C00;
+      --accent-brown: #8B4513;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header Navigation */
+    .elegant-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo-elegant {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-elegant {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-elegant a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-elegant a:hover,
+    .nav-elegant a.active {
+      color: var(--primary-gold);
+    }
+
+    .nav-elegant a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-elegant a:hover::after,
+    .nav-elegant a.active::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero-elegant {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('img/Karte.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-top: 80px;
+    }
+
+    .hero-content-elegant {
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    .hero-title-elegant {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-subtitle-elegant {
+      font-size: 1.2rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* Menu Section */
+    .menu-section {
+      padding: 6rem 0;
+      background: var(--darker-bg);
+    }
+
+    .container-elegant {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      color: var(--primary-gold);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-gold);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .menu-category-card {
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
+    }
+
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .category-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background: var(--primary-gold);
+    }
+
+    .menu-items-elegant {
+      list-style: none;
+    }
+
+    .menu-item-elegant {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .menu-item-elegant:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item-elegant:hover {
+      background: rgba(255, 140, 0, 0.05);
+      padding-left: 1rem;
+      border-radius: 8px;
+    }
+
+    .item-name {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .item-price {
+      font-size: 1.2rem;
+      color: var(--primary-gold);
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .item-description {
+      font-size: 0.9rem;
+      color: rgba(245, 245, 245, 0.7);
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
+
+    /* Price Note */
+    .price-note {
+      background: var(--dark-bg);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 4rem 0;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .price-note p {
+      color: rgba(245, 245, 245, 0.7);
+      font-style: italic;
+    }
+
+    /* Footer */
+    .footer-elegant {
+      background: var(--darker-bg);
+      padding: 3rem 0 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .footer-content {
+      color: var(--text-light);
+      opacity: 0.7;
+    }
+
+    .footer-content a {
+      color: var(--primary-gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-content a:hover {
+      color: #FFA500;
+    }
+
+    .social-links {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #FFA500;
+      transform: translateY(-3px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--primary-gold);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(26, 26, 26, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      text-align: center;
+      min-width: 200px;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      transform: scale(1.05);
+    }
+
+    .mobile-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: var(--primary-gold);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .nav-elegant {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .hero-title-elegant {
+        font-size: 2.5rem;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .menu-category-card {
+        padding: 2rem;
+      }
+
+      .header-content {
+        padding: 0 1rem;
+      }
+
+      .container-elegant {
+        padding: 0 1rem;
+      }
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Menu Card Animations */
+    .menu-category-card {
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .menu-category-card:nth-child(odd) {
+      transform: translateX(-100px);
+    }
+
+    .menu-category-card:nth-child(even) {
+      transform: translateX(100px);
+    }
+
+    .menu-category-card.animate-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Staggered animation delays */
+    .menu-category-card:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .menu-category-card:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+
+    .menu-category-card:nth-child(3) {
+      transition-delay: 0.5s;
+    }
+
+    .menu-category-card:nth-child(4) {
+      transition-delay: 0.7s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="elegant-header">
+    <div class="header-content">
+      <a href="index.html" class="logo-elegant">Beate's Grill</a>
+      <nav class="nav-elegant">
+        <a href="index.html">Home</a>
+        <a href="speisekarte.html" class="active">Speisekarte</a>
+        <a href="gesellschaftsraum.html">Gesellschaftsraum</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menü öffnen">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="toggleMobileMenu()" aria-label="Menü schließen">✕</button>
+    <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+    <a href="speisekarte.html" class="active" onclick="toggleMobileMenu()">Speisekarte</a>
+    <a href="gesellschaftsraum.html" onclick="toggleMobileMenu()">Gesellschaftsraum</a>
+    <a href="kontakt.html" onclick="toggleMobileMenu()">Kontakt</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-elegant">
+    <div class="hero-content-elegant">
+      <h1 class="hero-title-elegant">Unsere Speisekarte</h1>
+      <p class="hero-subtitle-elegant">Frisch, lecker & schnell – entdecke unsere Klassiker und Snacks!</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container-elegant">
+      <div class="menu-grid">
+        <!-- Klassiker -->
+        <div class="menu-category-card">
+          <h2 class="category-title">Klassiker</h2>
+          <ul class="menu-items-elegant">
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Currywurst mit Pommes</div>
+                <div class="item-description">Die Königin der deutschen Imbissküche</div>
+              </div>
+              <span class="item-price">5,50 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Bratwurst im Brötchen</div>
+                <div class="item-description">Klassisch und herzhaft</div>
+              </div>
+              <span class="item-price">3,00 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Schnitzel "Wiener Art"</div>
+                <div class="item-description">Zart paniert und goldbraun</div>
+              </div>
+              <span class="item-price">7,00 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Jägerschnitzel</div>
+                <div class="item-description">Mit unserer berühmten Jägersoße</div>
+              </div>
+              <span class="item-price">8,50 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Gyros Pita</div>
+                <div class="item-description">Authentisch griechisch gewürzt</div>
+              </div>
+              <span class="item-price">6,50 €</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Burger & Snacks -->
+        <div class="menu-category-card">
+          <h2 class="category-title">Burger & Snacks</h2>
+          <ul class="menu-items-elegant">
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Hamburger</div>
+                <div class="item-description">Saftig und frisch belegt</div>
+              </div>
+              <span class="item-price">4,00 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Cheeseburger</div>
+                <div class="item-description">Mit geschmolzenem Käse</div>
+              </div>
+              <span class="item-price">4,50 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Chicken Nuggets (6 Stk.)</div>
+                <div class="item-description">Knusprig paniert</div>
+              </div>
+              <span class="item-price">3,50 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Frikadelle</div>
+                <div class="item-description">Hausgemacht und würzig</div>
+              </div>
+              <span class="item-price">3,20 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Schaschlik</div>
+                <div class="item-description">Mariniert und gegrillt</div>
+              </div>
+              <span class="item-price">4,80 €</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Beilagen -->
+        <div class="menu-category-card">
+          <h2 class="category-title">Beilagen</h2>
+          <ul class="menu-items-elegant">
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Pommes frites</div>
+                <div class="item-description">Goldgelb und knusprig</div>
+              </div>
+              <span class="item-price">2,50 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Currysoße</div>
+                <div class="item-description">Hausgemacht</div>
+              </div>
+              <span class="item-price">0,80 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Salatbecher</div>
+                <div class="item-description">Frisch und knackig</div>
+              </div>
+              <span class="item-price">3,00 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Brötchen</div>
+                <div class="item-description">Frisch gebacken</div>
+              </div>
+              <span class="item-price">0,80 €</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Getränke -->
+        <div class="menu-category-card">
+          <h2 class="category-title">Getränke</h2>
+          <ul class="menu-items-elegant">
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Coca-Cola 0,33l</div>
+                <div class="item-description">Eisgekühlt serviert</div>
+              </div>
+              <span class="item-price">1,80 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Fanta 0,33l</div>
+                <div class="item-description">Fruchtig und erfrischend</div>
+              </div>
+              <span class="item-price">1,80 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Wasser 0,5l</div>
+                <div class="item-description">Still oder sprudelnd</div>
+              </div>
+              <span class="item-price">1,50 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Kaffee</div>
+                <div class="item-description">Frisch gebrüht</div>
+              </div>
+              <span class="item-price">1,20 €</span>
+            </li>
+            <li class="menu-item-elegant">
+              <div>
+                <div class="item-name">Tee</div>
+                <div class="item-description">Verschiedene Sorten</div>
+              </div>
+              <span class="item-price">1,00 €</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Price Note -->
+      <div class="price-note fade-in">
+        <p><em>Alle Preise inkl. MwSt. Preisänderungen vorbehalten. Stand: Dezember 2024</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-elegant">
+    <div class="container-elegant">
+
+      <div class="footer-content">
+        <p>Tel: <a href="tel:+49230614619">+49 2306 14619</a> | Web: <a href="http://beates-grill.de" target="_blank" rel="noopener">beates-grill.de</a></p>
+        <p>&copy; 2024 Beate's Grill. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu card animations
+    const menuObserverOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const menuObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, menuObserverOptions);
+
+    // Observe menu cards
+    document.querySelectorAll('.menu-category-card').forEach(card => {
+      menuObserver.observe(card);
+    });
+
+    // Regular scroll animations for other elements
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+      
+      // Prevent body scroll when menu is open
+      if (mobileNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (mobileNav.classList.contains('active') && 
+          !mobileNav.contains(e.target) && 
+          !menuToggle.contains(e.target)) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active')) {
+          toggleMobileMenu();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

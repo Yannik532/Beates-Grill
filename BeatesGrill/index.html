@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beate's Grill in Lünen - Ihr Imbiss für Currywurst, Jägerschnitzel, Gyros und mehr. Frisch zubereitet, faire Preise, freundlicher Service." />
+  <meta name="keywords" content="Imbiss Lünen, Currywurst, Jägerschnitzel, Gyros, Beate's Grill, Bebelstraße" />
+  <meta name="author" content="Beate's Grill" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beate's Grill - Imbiss in Lünen" />
+  <meta property="og:description" content="Imbisskultur in Lünen – seit Jahren beliebt für Currywurst, Gyros & mehr." />
+  <meta property="og:image" content="img/hero.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Beate's Grill - Imbiss in Lünen" />
+  <meta property="twitter:description" content="Imbisskultur in Lünen – seit Jahren beliebt für Currywurst, Gyros & mehr." />
+  
+  <title>Beate's Grill - Imbiss in Lünen | Currywurst, Jägerschnitzel & mehr</title>
+
+  <!-- Preload wichtiger Ressourcen -->
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="preload" href="img/hero.jpg" as="image" />
+  <link rel="preload" href="img/Tisch.jpg?v=2024" as="image" />
+  <link rel="preload" href="img/Currywurst.jpg" as="image" />
+  
+  <!-- DNS Prefetch für externe Ressourcen -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//www.google.com" />
+  
+  <!-- Google Fonts: Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- Strukturierte Daten für lokales Geschäft -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Beate's Grill",
+    "image": "img/hero.jpg",
+    "description": "Imbiss in Lünen für Currywurst, Jägerschnitzel, Gyros und mehr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bebelstraße 66",
+      "addressLocality": "Lünen",
+      "postalCode": "44532",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49 2306 14619",
+    "openingHours": [
+      "Mo 12:00-20:00",
+      "We 12:00-20:00", 
+      "Th 12:00-20:00",
+      "Fr 12:00-20:00",
+      "Sa 12:00-20:00",
+      "Su 12:00-20:00"
+    ],
+    "servesCuisine": "German",
+    "priceRange": "€"
+  }
+  </script>
+
+  <style>
+    /* Neues elegantes Restaurant-Design */
+    :root {
+      --primary-gold: #FF8C00;
+      --dark-bg: #1a1a1a;
+      --darker-bg: #0f0f0f;
+      --text-light: #f5f5f5;
+      --text-gold: #FF8C00;
+      --accent-brown: #8B4513;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Performance Optimierungen */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Hardware-Beschleunigung für Animationen */
+    .fade-in,
+    .contact-info,
+    .opening-hours,
+    .anfahrt-section,
+    .slider-wrapper,
+    .slide {
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header Navigation */
+    .elegant-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .logo-elegant {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    /* Header Status Indicator */
+    .header-status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      background: rgba(255, 140, 0, 0.1);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 140, 0, 0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    .header-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .header-status-dot.open {
+      background: #4CAF50;
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    }
+
+    .header-status-dot.closed {
+      background: #f44336;
+      box-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
+    }
+
+    .header-status-text {
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .header-status-text.open {
+      color: #4CAF50;
+    }
+
+    .header-status-text.closed {
+      color: #f44336;
+    }
+
+    .nav-elegant {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-elegant a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-elegant a:hover,
+    .nav-elegant a.active {
+      color: var(--primary-gold);
+    }
+
+    .nav-elegant a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-elegant a:hover::after,
+    .nav-elegant a.active::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero-elegant {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('img/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content-elegant {
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    .hero-title-elegant {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-subtitle-elegant {
+      font-size: 1.3rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-button:hover {
+              background: #FFA500;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 6rem 0;
+      background: var(--darker-bg);
+    }
+
+    .container-elegant {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      color: var(--primary-gold);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-gold);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+
+    .about-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary-gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-image {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* Specialties Section */
+    .specialties-section {
+      padding: 6rem 0;
+      background: var(--dark-bg);
+    }
+
+    /* Slider Container */
+    .specialty-slider {
+      position: relative;
+      max-width: 800px;
+      margin: 3rem auto 0;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+      z-index: 2;
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: var(--text-light);
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    .slide-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .slide-description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      margin-bottom: 2rem;
+    }
+
+    /* Slide Button */
+    .slide-button {
+      display: inline-block;
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      border: 2px solid var(--primary-gold);
+    }
+
+    .slide-button:hover {
+      background: transparent;
+      color: var(--primary-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+    }
+
+
+
+    /* Navigation Buttons */
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 140, 0, 0.8);
+      color: var(--dark-bg);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider-nav:hover {
+      background: var(--primary-gold);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .slider-nav.prev {
+      left: 20px;
+    }
+
+    .slider-nav.next {
+      right: 20px;
+    }
+
+    /* Dots Indicator */
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 140, 0, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--primary-gold);
+      transform: scale(1.2);
+    }
+
+    /* Touch/Swipe Support */
+    .specialty-slider {
+      touch-action: pan-y;
+      user-select: none;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .specialty-slider {
+        margin: 2rem 1rem 0;
+      }
+
+      .slide {
+        height: 400px;
+      }
+
+      .slide-title {
+        font-size: 2.2rem;
+      }
+
+      .slide-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .slide-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.8rem;
+      }
+
+      .slider-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .slider-nav.prev {
+        left: 10px;
+      }
+
+      .slider-nav.next {
+        right: 10px;
+      }
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 6rem 0;
+      background: var(--darker-bg);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .contact-info {
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+    }
+
+    .contact-item i {
+      color: var(--primary-gold);
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .opening-hours {
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .opening-hours h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+    }
+
+    .hours-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+    }
+
+    .hours-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Anfahrt Section */
+    .anfahrt-section {
+      margin-top: 4rem;
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .anfahrt-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .map-container {
+      width: 100%;
+    }
+
+    .streetview-info {
+      text-align: center;
+      margin-top: 1rem;
+      color: var(--text-light);
+      font-style: italic;
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    .map-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Status Indicator */
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: rgba(255, 140, 0, 0.1);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .status-dot.open {
+      background: #4CAF50;
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    }
+
+    .status-dot.closed {
+      background: #f44336;
+      box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+    }
+
+    .status-text {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .status-text.open {
+      color: #4CAF50;
+    }
+
+    .status-text.closed {
+      color: #f44336;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Footer */
+    .footer-elegant {
+      background: var(--darker-bg);
+      padding: 3rem 0 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .footer-content {
+      color: var(--text-light);
+      opacity: 0.7;
+    }
+
+    .social-links {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #FFA500;
+      transform: translateY(-3px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--primary-gold);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(26, 26, 26, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      text-align: center;
+      min-width: 200px;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      transform: scale(1.05);
+    }
+
+    .mobile-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: var(--primary-gold);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      /* Disable hover effects on mobile for better performance */
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .nav-elegant {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .hero-title-elegant {
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle-elegant {
+        font-size: 1.1rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .specialty-slider {
+        margin: 2rem 1rem 0;
+      }
+
+      .slide {
+        height: 400px;
+      }
+
+      .slide-title {
+        font-size: 2rem;
+      }
+
+      .slide-description {
+        font-size: 1rem;
+      }
+
+      .header-content {
+        padding: 0 1rem;
+      }
+
+      .container-elegant {
+        padding: 0 1rem;
+      }
+
+      /* Mobile Header Status */
+      .logo-section {
+        gap: 1rem;
+      }
+
+      .header-status-indicator {
+        padding: 0.3rem 0.6rem;
+      }
+
+      .header-status-text {
+        font-size: 0.7rem;
+      }
+
+      .header-status-dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      /* Mobile Anfahrt Section */
+      .anfahrt-section {
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+      }
+
+      /* Optimize mobile animations */
+      .fade-in,
+      .contact-info,
+      .opening-hours,
+      .anfahrt-section {
+        transition-duration: 0.4s;
+      }
+
+      /* Reduce motion for users who prefer it */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Enhanced Contact Animations */
+    .contact-info {
+      transform: translateX(-50px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .contact-info.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .opening-hours {
+      transform: translateX(50px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-delay: 0.2s;
+    }
+
+    .opening-hours.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .anfahrt-section {
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-delay: 0.4s;
+    }
+
+    .anfahrt-section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Contact Item Animations */
+    .contact-item {
+      transform: translateX(-20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .contact-item.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .contact-item:nth-child(1) { transition-delay: 0.1s; }
+    .contact-item:nth-child(2) { transition-delay: 0.2s; }
+    .contact-item:nth-child(3) { transition-delay: 0.3s; }
+
+    /* Hours Item Animations */
+    .hours-item {
+      transform: translateX(20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .hours-item.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .hours-item:nth-child(1) { transition-delay: 0.1s; }
+    .hours-item:nth-child(2) { transition-delay: 0.2s; }
+    .hours-item:nth-child(3) { transition-delay: 0.3s; }
+
+    /* Hover Effects */
+    .contact-info:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255, 140, 0, 0.2);
+    }
+
+    .opening-hours:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255, 140, 0, 0.2);
+    }
+
+    .anfahrt-section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(255, 140, 0, 0.15);
+    }
+
+    /* Mobile Contact Animations */
+    @media (max-width: 768px) {
+      .contact-info,
+      .opening-hours {
+        transform: translateY(30px);
+        transition-delay: 0s;
+      }
+
+      .contact-info.visible,
+      .opening-hours.visible {
+        transform: translateY(0);
+      }
+
+      .opening-hours {
+        transition-delay: 0.3s;
+      }
+
+      .anfahrt-section {
+        transition-delay: 0.6s;
+      }
+
+      /* Reduced hover effects on mobile */
+      .contact-info:hover,
+      .opening-hours:hover,
+      .anfahrt-section:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="elegant-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <a href="#" class="logo-elegant">Beate's Grill</a>
+        <!-- Status Indicator in Header -->
+        <div class="header-status-indicator" id="headerStatusIndicator">
+          <div class="header-status-dot" id="headerStatusDot"></div>
+          <span class="header-status-text" id="headerStatusText">Wird geladen...</span>
+        </div>
+      </div>
+      <nav class="nav-elegant">
+        <a href="#home" class="active">Home</a>
+        <a href="speisekarte.html">Speisekarte</a>
+        <a href="gesellschaftsraum.html">Gesellschaftsraum</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menü öffnen">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="toggleMobileMenu()" aria-label="Menü schließen">✕</button>
+    <a href="#home" class="active" onclick="toggleMobileMenu()">Home</a>
+    <a href="speisekarte.html" onclick="toggleMobileMenu()">Speisekarte</a>
+    <a href="gesellschaftsraum.html" onclick="toggleMobileMenu()">Gesellschaftsraum</a>
+    <a href="kontakt.html" onclick="toggleMobileMenu()">Kontakt</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-elegant">
+    <div class="hero-content-elegant">
+      <h1 class="hero-title-elegant">Beate's Grill</h1>
+      <p class="hero-subtitle-elegant">Imbisskultur der Extraklasse</p>
+      <p class="hero-description">
+        Erleben Sie authentische deutsche Imbissküche in stilvollem Ambiente. 
+        Von der klassischen Currywurst bis zum perfekten Jägerschnitzel – 
+        bei uns wird Tradition mit Leidenschaft zelebriert.
+      </p>
+      <a href="speisekarte.html" class="cta-button">Unsere Speisekarte</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container-elegant">
+      <h2 class="section-title fade-in">Über Beate's Grill</h2>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h3>Tradition trifft Qualität</h3>
+          <p>
+            Seit Jahren steht Beate's Grill für ehrliche Imbissküche und freundlichen Service in Lünen. 
+            Wir verwenden nur die besten Zutaten und bereiten alles frisch für Sie zu.
+          </p>
+          <p>
+            Unser Geheimnis? Leidenschaft für gutes Essen, faire Preise und die Liebe zum Detail. 
+            Ob Currywurst, Jägerschnitzel oder Gyros – bei uns schmeckt es wie zu Hause.
+          </p>
+        </div>
+                <div class="about-image fade-in">
+          <img src="img/Tisch.jpg?v=2024" alt="Beate's Grill Innenansicht" loading="lazy" decoding="async" />
+    </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties Section -->
+  <section class="specialties-section">
+    <div class="container-elegant">
+      <h2 class="section-title fade-in">Unsere Spezialitäten</h2>
+      
+      <div class="specialty-slider fade-in">
+        <div class="slider-wrapper" id="sliderWrapper">
+          <!-- Slide 1: Currywurst -->
+          <div class="slide">
+            <img src="img/Currywurst.jpg" alt="Currywurst" class="slide-image" loading="eager" decoding="async">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <h3 class="slide-title">Currywurst</h3>
+              <p class="slide-description">Die Königin der deutschen Imbissküche – mit unserer hausgemachten Currysoße</p>
+              <a href="speisekarte.html" class="slide-button">Zur Speisekarte</a>
+            </div>
+          </div>
+          
+          <!-- Slide 2: Jägerschnitzel -->
+          <div class="slide">
+            <img src="img/Jägerschnitzel_1.jpg" alt="Jägerschnitzel" class="slide-image" loading="lazy" decoding="async">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <h3 class="slide-title">Jägerschnitzel</h3>
+              <p class="slide-description">Zart paniert und mit unserer berühmten Jägersoße – ein Gedicht für den Gaumen</p>
+              <a href="speisekarte.html" class="slide-button">Zur Speisekarte</a>
+            </div>
+          </div>
+          
+          <!-- Slide 3: Gyros -->
+          <div class="slide">
+            <img src="img/Gyros.jpg" alt="Gyros" class="slide-image" loading="lazy" decoding="async">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <h3 class="slide-title">Gyros</h3>
+              <p class="slide-description">Authentisch griechisch gewürzt und frisch vom Spieß geschnitten</p>
+              <a href="speisekarte.html" class="slide-button">Zur Speisekarte</a>
+            </div>
+          </div>
+          
+          <!-- Slide 4: Pommes -->
+          <div class="slide">
+            <img src="img/Pommes.jpg" alt="Pommes" class="slide-image" loading="lazy" decoding="async">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <h3 class="slide-title">Pommes</h3>
+              <p class="slide-description">Goldgelb und knusprig – die perfekte Beilage zu allen unseren Gerichten</p>
+              <a href="speisekarte.html" class="slide-button">Zur Speisekarte</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <button class="slider-nav prev" onclick="changeSlide(-1)" aria-label="Vorheriges Gericht">‹</button>
+        <button class="slider-nav next" onclick="changeSlide(1)" aria-label="Nächstes Gericht">›</button>
+      </div>
+      
+      <!-- Dots Indicator -->
+      <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container-elegant">
+      <h2 class="section-title fade-in">Besuchen Sie uns</h2>
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <h3>Kontakt</h3>
+          <div class="contact-item">
+            <i>📍</i>
+            <span>Bebelstraße 66, 44532 Lünen</span>
+          </div>
+          <div class="contact-item">
+            <i>📞</i>
+            <span>+49 2306 14619</span>
+          </div>
+          <div class="contact-item">
+            <i>✉️</i>
+            <span>info@beates-grill.de</span>
+          </div>
+        </div>
+        <div class="opening-hours fade-in">
+          <h3>Öffnungszeiten</h3>
+          <div class="hours-item">
+            <span>Montag</span>
+            <span>12:00 - 20:00</span>
+          </div>
+          <div class="hours-item">
+            <span>Dienstag</span>
+            <span>Geschlossen</span>
+          </div>
+          <div class="hours-item">
+            <span>Mittwoch - Sonntag</span>
+            <span>12:00 - 20:00</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Anfahrt Section -->
+      <div class="anfahrt-section fade-in">
+        <h3>So finden Sie uns</h3>
+        <div class="map-container">
+          <div class="map-wrapper">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!4v1234567890123!6m8!1m7!1sraptIIAhQd088hyPQ1Kduw!2m2!1d51.6020308!2d7.5293512!3f230.03!4f-8.6!5f0.7071067811865476"
+              width="100%" 
+              height="350" 
+              style="border:0; border-radius: 10px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              allow="accelerometer; gyroscope; magnetometer">
+            </iframe>
+          </div>
+          <p class="streetview-info">360° Straßenansicht - So sieht unser Restaurant von außen aus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-elegant">
+    <div class="container-elegant">
+      
+      <div class="footer-content">
+        <p>&copy; 2024 Beate's Grill. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Slider functionality
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    
+    // Auto-slide timer
+    let autoSlideTimer;
+    
+    function showSlide(index) {
+      // Ensure index is within bounds
+      if (index >= slides.length) currentSlideIndex = 0;
+      if (index < 0) currentSlideIndex = slides.length - 1;
+      
+      // Use requestAnimationFrame for smooth animations
+      requestAnimationFrame(() => {
+        // Move slider with hardware acceleration
+        const translateX = -currentSlideIndex * 100;
+        sliderWrapper.style.transform = `translate3d(${translateX}%, 0, 0)`;
+        
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentSlideIndex);
+        });
+      });
+    }
+    
+    function changeSlide(direction) {
+      currentSlideIndex += direction;
+      showSlide(currentSlideIndex);
+      resetAutoSlide();
+    }
+    
+    function currentSlide(index) {
+      currentSlideIndex = index - 1;
+      showSlide(currentSlideIndex);
+      resetAutoSlide();
+    }
+    
+    function nextSlide() {
+      currentSlideIndex++;
+      showSlide(currentSlideIndex);
+    }
+    
+    function resetAutoSlide() {
+      clearInterval(autoSlideTimer);
+      autoSlideTimer = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+    }
+    
+    // Touch/Swipe support
+    let startX = 0;
+    let endX = 0;
+    
+    const slider = document.querySelector('.specialty-slider');
+    
+    slider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+    
+    slider.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+    
+    function handleSwipe() {
+      const threshold = 50; // Minimum swipe distance
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          changeSlide(1);
+        } else {
+          // Swipe right - previous slide
+          changeSlide(-1);
+        }
+      }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        changeSlide(-1);
+      } else if (e.key === 'ArrowRight') {
+        changeSlide(1);
+      }
+    });
+    
+    // Initialize auto-slide
+    resetAutoSlide();
+
+    // Optimized resize handling
+    const handleResize = debounce(() => {
+      // Recalculate slider position on resize
+      const translateX = -currentSlideIndex * 100;
+      sliderWrapper.style.transform = `translate3d(${translateX}%, 0, 0)`;
+    }, 250);
+
+    window.addEventListener('resize', handleResize, { passive: true });
+
+    // Opening hours status checker
+    function updateOpeningStatus() {
+      const now = new Date();
+      const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+      const currentTime = now.getHours() * 100 + now.getMinutes(); // Format: HHMM
+      
+      const headerStatusDot = document.getElementById('headerStatusDot');
+      const headerStatusText = document.getElementById('headerStatusText');
+      
+      let isOpen = false;
+      let statusMessage = '';
+      
+      // Opening hours: Monday 12:00-20:00, Tuesday closed, Wednesday-Sunday 12:00-20:00
+      if (currentDay === 2) { // Tuesday
+        isOpen = false;
+        statusMessage = 'Geschlossen';
+      } else if (currentDay === 1 || (currentDay >= 3 && currentDay <= 6) || currentDay === 0) { // Monday or Wed-Sun
+        if (currentTime >= 1200 && currentTime <= 2000) {
+          isOpen = true;
+          statusMessage = 'Geöffnet';
+        } else if (currentTime < 1200) {
+          isOpen = false;
+          const hoursUntilOpen = Math.floor((1200 - currentTime) / 100);
+          const minutesUntilOpen = (1200 - currentTime) % 100;
+          if (hoursUntilOpen > 0) {
+            statusMessage = `Öffnet in ${hoursUntilOpen}h`;
+          } else {
+            statusMessage = `Öffnet in ${minutesUntilOpen}min`;
+          }
+        } else {
+          isOpen = false;
+          statusMessage = 'Geschlossen';
+        }
+      } else {
+        isOpen = false;
+        statusMessage = 'Geschlossen';
+      }
+      
+      // Update header status display
+      headerStatusDot.className = 'header-status-dot ' + (isOpen ? 'open' : 'closed');
+      headerStatusText.className = 'header-status-text ' + (isOpen ? 'open' : 'closed');
+      headerStatusText.textContent = statusMessage;
+    }
+    
+    // Update status immediately and then every minute
+    updateOpeningStatus();
+    setInterval(updateOpeningStatus, 60000);
+    
+    // Pause auto-slide on hover
+    slider.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideTimer);
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+      resetAutoSlide();
+    });
+
+    // Performance utilities
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
+
+    // Enhanced scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Animate contact items individually
+          if (entry.target.classList.contains('contact-info')) {
+            const contactItems = entry.target.querySelectorAll('.contact-item');
+            contactItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('visible');
+              }, index * 100);
+            });
+          }
+          
+          // Animate hours items individually
+          if (entry.target.classList.contains('opening-hours')) {
+            const hoursItems = entry.target.querySelectorAll('.hours-item');
+            hoursItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('visible');
+              }, index * 100);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .contact-info, .opening-hours, .anfahrt-section').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+      
+      // Prevent body scroll when menu is open
+      if (mobileNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (mobileNav.classList.contains('active') && 
+          !mobileNav.contains(e.target) && 
+          !menuToggle.contains(e.target)) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active')) {
+          toggleMobileMenu();
+        }
+      }
+    });
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+
+  </script>
+</body>
+</html>
