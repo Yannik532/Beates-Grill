@@ -17,11 +17,16 @@
     /* Elegantes Restaurant-Design */
     :root {
       --primary-gold: #FF8C00;
+      --primary-gold-light: #FFA500;
+      --primary-gold-dark: #FF7700;
       --dark-bg: #1a1a1a;
       --darker-bg: #0f0f0f;
       --text-light: #f5f5f5;
       --text-gold: #FF8C00;
       --accent-brown: #8B4513;
+      --glass-bg: rgba(26, 26, 26, 0.8);
+      --glass-border: rgba(255, 140, 0, 0.2);
+      --shadow-gold: rgba(255, 140, 0, 0.1);
     }
 
     * {
@@ -38,16 +43,18 @@
       overflow-x: hidden;
     }
 
-    /* Header Navigation */
+    /* Header Navigation - Modern Glass Effect */
     .elegant-header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(26, 26, 26, 0.95);
-      backdrop-filter: blur(10px);
+      background: rgba(26, 26, 26, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       z-index: 1000;
       padding: 1rem 0;
-      border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
     .header-content {
@@ -66,6 +73,11 @@
       color: var(--primary-gold);
       text-decoration: none;
       letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .logo-elegant:hover {
+      transform: scale(1.05);
     }
 
     .nav-elegant {
@@ -78,8 +90,10 @@
       color: var(--text-light);
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
     }
 
     .nav-elegant a:hover,
@@ -91,10 +105,11 @@
       content: '';
       position: absolute;
       bottom: -5px;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 0;
       height: 2px;
-      background: var(--primary-gold);
+      background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
       transition: width 0.3s ease;
     }
 
@@ -1155,11 +1170,11 @@
         <div class="directions-grid">
           <div class="direction-item">
             <h4>🚗 Mit dem Auto</h4>
-            <p>Parkplätze direkt vor dem Restaurant verfügbar. Zentrale Lage in Lünen, gut erreichbar über die B54.</p>
+            <p>Parkplätze sind direkt an der Bebelstraße verfügbar (seitliche Straßenparkplätze). Gut erreichbar über die B54.</p>
           </div>
           <div class="direction-item">
             <h4>🚌 Öffentliche Verkehrsmittel</h4>
-            <p>Bushaltestelle "Bebelstraße" in unmittelbarer Nähe. Gute Anbindung an das öffentliche Verkehrsnetz.</p>
+            <p>Bushaltestellen "Lützowstr" oder "Seelhuve" in der Nähe.</p>
           </div>
         </div>
       </div>
