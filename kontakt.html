@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontakt zu Beate's Grill in Lünen - Adresse, Telefon, Öffnungszeiten und Anfahrt. Bebelstraße 66, 44532 Lünen." />
+  <meta name="keywords" content="Kontakt, Adresse, Telefon, Öffnungszeiten, Lünen, Bebelstraße, Anfahrt" />
+  
+  <title>Kontakt | Beate's Grill - Adresse & Öffnungszeiten</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <style>
+    /* Elegantes Restaurant-Design */
+    :root {
+      --primary-gold: #FF8C00;
+      --dark-bg: #1a1a1a;
+      --darker-bg: #0f0f0f;
+      --text-light: #f5f5f5;
+      --text-gold: #FF8C00;
+      --accent-brown: #8B4513;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header Navigation */
+    .elegant-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo-elegant {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-elegant {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-elegant a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-elegant a:hover,
+    .nav-elegant a.active {
+      color: var(--primary-gold);
+    }
+
+    .nav-elegant a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-elegant a:hover::after,
+    .nav-elegant a.active::after {
+      width: 100%;
+    }
+
+    /* Status Indicator */
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4CAF50;
+      animation: pulse 2s infinite;
+    }
+
+    .status-dot.closed {
+      background: #f44336;
+      animation: none;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+    }
+
+    /* Logo Section */
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      background: rgba(255, 140, 0, 0.1);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 140, 0, 0.3);
+      backdrop-filter: blur(5px);
+    }
+
+    .header-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .header-status-dot.open {
+      background: #4CAF50;
+    }
+
+    .header-status-dot.closed {
+      background: #f44336;
+    }
+
+    .header-status-text {
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .header-status-text.open {
+      color: #4CAF50;
+    }
+
+    .header-status-text.closed {
+      color: #f44336;
+    }
+
+    /* Hero Section */
+    .hero-elegant {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('img/Außen.jpg');
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-top: 80px;
+    }
+
+    .hero-content-elegant {
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    .hero-title-elegant {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-subtitle-elegant {
+      font-size: 1.2rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 6rem 0;
+      background: var(--darker-bg);
+    }
+
+    .container-elegant {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      color: var(--primary-gold);
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-gold);
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+
+    .contact-card {
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary-gold);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-info address {
+      font-style: normal;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info li {
+      padding: 0.3rem 0;
+      font-size: 1.1rem;
+    }
+
+    .contact-info a {
+      color: var(--primary-gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #FFA500;
+    }
+
+    /* Form Styles */
+    .contact-form {
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--primary-gold);
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid rgba(255, 140, 0, 0.3);
+      border-radius: 10px;
+      background: var(--darker-bg);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-gold);
+      box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .error-message {
+      color: #ff6b6b;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    .btn-submit {
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-submit:hover {
+      background: #FFA500;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+    }
+
+    /* Map Section */
+    .map-section {
+      grid-column: 1 / -1;
+      background: var(--dark-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 140, 0, 0.2);
+      margin-top: 2rem;
+    }
+
+    .map-container {
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    /* Map Toggle Buttons */
+    .map-toggle-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .map-toggle-btn {
+      background: transparent;
+      border: 2px solid var(--primary-gold);
+      color: var(--primary-gold);
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .map-toggle-btn.active,
+    .map-toggle-btn:hover {
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      transform: translateY(-2px);
+    }
+
+    .directions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .direction-item {
+      background: var(--darker-bg);
+      padding: 2rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 140, 0, 0.1);
+    }
+
+    .direction-item h4 {
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #FFA500;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    .footer-elegant {
+      background: var(--darker-bg);
+      padding: 4rem 0 1rem;
+      border-top: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--primary-gold);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--primary-gold);
+    }
+
+    .footer-contact p,
+    .opening-hours p {
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .footer-contact strong {
+      color: var(--primary-gold);
+    }
+
+    .footer-contact a,
+    .footer-bottom a {
+      color: var(--primary-gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact a:hover,
+    .footer-bottom a:hover {
+      color: #FFA500;
+    }
+
+    .opening-hours span {
+      font-weight: 600;
+      color: var(--primary-gold);
+      display: inline-block;
+      min-width: 120px;
+    }
+
+    .holiday-note {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid transparent;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-gold);
+    }
+
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0.3rem;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--primary-gold);
+      transition: width 0.3s ease;
+    }
+
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+
+    .footer-info p {
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 140, 0, 0.1);
+      color: rgba(245, 245, 245, 0.7);
+    }
+
+    .footer-bottom p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-section h3 {
+        font-size: 1.3rem;
+      }
+
+      .opening-hours span {
+        min-width: 100px;
+        font-size: 0.9rem;
+      }
+
+      .footer-links {
+        text-align: center;
+      }
+
+      .footer-contact {
+        text-align: center;
+      }
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--primary-gold);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(26, 26, 26, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.3s ease;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      text-align: center;
+      min-width: 200px;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      background: var(--primary-gold);
+      color: var(--dark-bg);
+      transform: scale(1.05);
+    }
+
+    .mobile-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: var(--primary-gold);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .nav-elegant {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .hero-title-elegant {
+        font-size: 2.5rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .directions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-content {
+        padding: 0 1rem;
+      }
+
+      .container-elegant {
+        padding: 0 1rem;
+      }
+
+      .header-status-indicator {
+        display: none;
+      }
+    }
+
+    /* Performance Optimierungen */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Hardware-Beschleunigung für Animationen */
+    .fade-in,
+    .contact-card,
+    .contact-form,
+    .map-section,
+    .direction-item {
+      will-change: transform, opacity;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Enhanced Contact Animations */
+    .contact-card {
+      transform: translateX(-60px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .contact-card.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .contact-form {
+      transform: translateX(60px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-delay: 0.2s;
+    }
+
+    .contact-form.visible {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .map-section {
+      transform: translateY(60px);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-delay: 0.4s;
+    }
+
+    .map-section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Contact Info Item Animations */
+    .contact-info {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .contact-info.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .contact-info:nth-child(1) { transition-delay: 0.1s; }
+    .contact-info:nth-child(2) { transition-delay: 0.2s; }
+    .contact-info:nth-child(3) { transition-delay: 0.3s; }
+
+    /* Form Group Animations */
+    .form-group {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .form-group.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .form-group:nth-child(1) { transition-delay: 0.1s; }
+    .form-group:nth-child(2) { transition-delay: 0.2s; }
+    .form-group:nth-child(3) { transition-delay: 0.3s; }
+
+    /* Button Animation */
+    .btn-submit {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+      transition-delay: 0.4s;
+    }
+
+    .btn-submit.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Social Links Animation */
+    .social-links a {
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .social-links a.visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .social-links a:nth-child(1) { transition-delay: 0.1s; }
+    .social-links a:nth-child(2) { transition-delay: 0.2s; }
+    .social-links a:nth-child(3) { transition-delay: 0.3s; }
+
+    /* Map Toggle Buttons Animation */
+    .map-toggle-btn {
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .map-toggle-btn.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .map-toggle-btn:nth-child(1) { transition-delay: 0.1s; }
+    .map-toggle-btn:nth-child(2) { transition-delay: 0.2s; }
+
+    /* Direction Items Animation */
+    .direction-item {
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .direction-item.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .direction-item:nth-child(1) { transition-delay: 0.1s; }
+    .direction-item:nth-child(2) { transition-delay: 0.2s; }
+
+    /* Map Container Animation */
+    .map-container {
+      transform: scale(0.9);
+      opacity: 0;
+      transition: all 0.8s ease;
+      transition-delay: 0.3s;
+    }
+
+    .map-container.visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    /* Enhanced Hover Effects */
+    .contact-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(255, 140, 0, 0.15);
+    }
+
+    .contact-form:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
+    }
+
+    .map-section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(255, 140, 0, 0.08);
+    }
+
+    /* Hero Animation */
+    .hero-title-elegant {
+      transform: translateY(50px);
+      opacity: 0;
+      animation: heroTitleSlide 1s ease-out 0.3s forwards;
+    }
+
+    .hero-subtitle-elegant {
+      transform: translateY(30px);
+      opacity: 0;
+      animation: heroSubtitleSlide 1s ease-out 0.6s forwards;
+    }
+
+    @keyframes heroTitleSlide {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes heroSubtitleSlide {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Mobile Contact Animations */
+    @media (max-width: 768px) {
+      /* Disable hover effects on mobile for better performance */
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .contact-card,
+      .contact-form {
+        transform: translateY(40px);
+        transition-delay: 0s;
+      }
+
+      .contact-card.visible,
+      .contact-form.visible {
+        transform: translateY(0);
+      }
+
+      .contact-form {
+        transition-delay: 0.3s;
+      }
+
+      .map-section {
+        transition-delay: 0.6s;
+      }
+
+      /* Reduced hover effects on mobile */
+      .contact-card:hover,
+      .contact-form:hover,
+      .map-section:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      /* Optimize mobile animations */
+      .fade-in,
+      .contact-card,
+      .contact-form,
+      .map-section {
+        transition-duration: 0.5s;
+      }
+
+      /* Reduce motion for users who prefer it */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    }
+
+    /* Scroll animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="elegant-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <a href="index.html" class="logo-elegant">Beate's Grill</a>
+        <div class="header-status-indicator" id="headerStatusIndicator">
+          <div class="header-status-dot" id="headerStatusDot"></div>
+          <span class="header-status-text" id="headerStatusText">Wird geladen...</span>
+        </div>
+      </div>
+      <nav class="nav-elegant">
+        <a href="index.html">Home</a>
+        <a href="speisekarte.html">Speisekarte</a>
+        <a href="gesellschaftsraum.html">Gesellschaftsraum</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+      </nav>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menü öffnen">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="toggleMobileMenu()" aria-label="Menü schließen">✕</button>
+    <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+    <a href="speisekarte.html" onclick="toggleMobileMenu()">Speisekarte</a>
+    <a href="gesellschaftsraum.html" onclick="toggleMobileMenu()">Gesellschaftsraum</a>
+    <a href="kontakt.html" class="active" onclick="toggleMobileMenu()">Kontakt</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-elegant">
+    <div class="hero-content-elegant">
+      <h1 class="hero-title-elegant">Kontakt</h1>
+      <p class="hero-subtitle-elegant">Wir freuen uns auf Ihren Besuch</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="container-elegant">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-card">
+          <h2 class="card-title">Kontaktinformationen</h2>
+          
+          <div class="contact-info">
+            <h3>📍 Adresse</h3>
+            <address>
+              Bebelstraße 66<br>
+              44532 Lünen
+            </address>
+          </div>
+
+          <div class="contact-info">
+            <h3>🕒 Öffnungszeiten</h3>
+            <ul>
+              <li>Montag: 12:00 - 20:00</li>
+              <li>Dienstag: Geschlossen</li>
+              <li>Mittwoch - Sonntag: 12:00 - 20:00</li>
+            </ul>
+          </div>
+
+          <div class="contact-info">
+            <h3>📞 Kontakt</h3>
+            <p>Telefon: <a href="tel:+49230614619">+49 2306 14619</a></p>
+            <p>E-Mail: <a href="mailto:info@beates-grill.de">info@beates-grill.de</a></p>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2 class="card-title">Nachricht senden</h2>
+          <form action="contact-handler.php" method="POST" id="contactForm">
+            <!-- CSRF Token -->
+            <input type="hidden" name="csrf_token" id="csrfToken" value="">
+            
+            <!-- Honeypot (verstecktes Feld gegen Bots) -->
+            <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+            
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required aria-describedby="name-error" minlength="2" maxlength="100">
+              <span id="name-error" class="error-message" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" required aria-describedby="email-error" maxlength="100">
+              <span id="email-error" class="error-message" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Nachricht *</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-error" placeholder="Ihre Nachricht an uns..." minlength="10" maxlength="1000"></textarea>
+              <span id="message-error" class="error-message" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Nachricht senden</span>
+              <span class="btn-loading" style="display: none;">Wird gesendet...</span>
+            </button>
+            <p style="margin-top: 1rem; opacity: 0.7;"><small>* Pflichtfelder</small></p>
+            
+            <!-- Status-Nachricht -->
+            <div id="form-status" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="map-section">
+        <h2 class="card-title">So finden Sie uns</h2>
+        
+        <!-- Map Toggle Buttons -->
+        <div class="map-toggle-buttons">
+          <button class="map-toggle-btn active" onclick="showMap('normal')">Karte</button>
+          <button class="map-toggle-btn" onclick="showMap('streetview')">Street View</button>
+        </div>
+        
+        <div class="map-container">
+          <!-- Normal Map -->
+          <iframe id="normal-map"
+            src="https://maps.google.com/maps?q=Bebelstraße%2066,%2044532%20Lünen&output=embed"
+            allowfullscreen="" 
+            loading="lazy"
+            title="Karte mit Standort von Beate's Grill"
+            aria-label="Interaktive Karte zeigt den Standort von Beate's Grill in der Bebelstraße 66, Lünen">
+          </iframe>
+          
+          <!-- Street View -->
+          <iframe id="streetview-map" style="display: none;"
+            src="https://www.google.com/maps/embed?pb=!4v1703123456789!6m8!1m7!1sraptIIAhQd088hyPQ1Kduw!2m2!1d51.6020308!2d7.5293512!3f230.03!4f-8.6!5f0.7820865974627469"
+            allowfullscreen="" 
+            loading="lazy"
+            title="Street View von Beate's Grill"
+            aria-label="Street View zeigt die Außenansicht von Beate's Grill in der Bebelstraße 66, Lünen">
+          </iframe>
+        </div>
+
+        <div class="directions-grid">
+          <div class="direction-item">
+            <h4>🚗 Mit dem Auto</h4>
+            <p>Parkplätze direkt vor dem Restaurant verfügbar. Zentrale Lage in Lünen, gut erreichbar über die B54.</p>
+          </div>
+          <div class="direction-item">
+            <h4>🚌 Öffentliche Verkehrsmittel</h4>
+            <p>Bushaltestelle "Bebelstraße" in unmittelbarer Nähe. Gute Anbindung an das öffentliche Verkehrsnetz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-elegant">
+    <div class="container-elegant">
+      <div class="footer-grid">
+        <!-- Kontakt -->
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <div class="footer-contact">
+            <p><strong>Beate's Grill</strong></p>
+            <p>Musterstraße 123<br>44532 Lünen</p>
+            <p>Tel: <a href="tel:+49230614619">+49 2306 14619</a></p>
+            <p>E-Mail: <a href="mailto:info@beates-grill.de">info@beates-grill.de</a></p>
+            <p>Web: <a href="http://beates-grill.de" target="_blank" rel="noopener">beates-grill.de</a></p>
+          </div>
+        </div>
+
+        <!-- Öffnungszeiten -->
+        <div class="footer-section">
+          <h3>Öffnungszeiten</h3>
+          <div class="opening-hours">
+            <p><span>Montag:</span> 12:00 - 20:00 Uhr</p>
+            <p><span>Dienstag:</span> <strong>Geschlossen</strong></p>
+            <p><span>Mittwoch - Sonntag:</span> 12:00 - 20:00 Uhr</p>
+            <p class="holiday-note">An Feiertagen gelten Sonderöffnungszeiten</p>
+          </div>
+        </div>
+
+        <!-- Service -->
+        <div class="footer-section">
+          <h3>Service</h3>
+          <nav class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="agb.html">Allgemeine Geschäftsbedingungen</a>
+          </nav>
+          <div class="footer-info">
+            <p>✅ Alle Preise inkl. MwSt.</p>
+            <p>🚗 Parkplätze vorhanden</p>
+            <p>📞 Telefonische Bestellungen möglich</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Beate's Grill. Alle Rechte vorbehalten.</p>
+        <p>Preisänderungen vorbehalten • Stand: Januar 2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Map toggle functionality
+    function showMap(type) {
+      const normalMap = document.getElementById('normal-map');
+      const streetviewMap = document.getElementById('streetview-map');
+      const buttons = document.querySelectorAll('.map-toggle-btn');
+      
+      // Remove active class from all buttons
+      buttons.forEach(btn => btn.classList.remove('active'));
+      
+      if (type === 'normal') {
+        normalMap.style.display = 'block';
+        streetviewMap.style.display = 'none';
+        buttons[0].classList.add('active');
+      } else if (type === 'streetview') {
+        normalMap.style.display = 'none';
+        streetviewMap.style.display = 'block';
+        buttons[1].classList.add('active');
+      }
+    }
+
+    // Sicheres Kontaktformular mit AJAX
+    document.addEventListener('DOMContentLoaded', function() {
+      // CSRF Token generieren
+      function generateCSRFToken() {
+        return 'csrf_' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+      }
+      
+      // CSRF Token setzen (wird später server-seitig validiert)
+      document.getElementById('csrfToken').value = generateCSRFToken();
+      
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
+      const formStatus = document.getElementById('form-status');
+      
+      // Formular-Submit Handler
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Button-Status ändern
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        
+        // Fehlermeldungen zurücksetzen
+        clearErrors();
+        formStatus.style.display = 'none';
+        
+        try {
+          // FormData erstellen
+          const formData = new FormData(form);
+          
+          // AJAX-Request
+          const response = await fetch('contact-handler.php', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest'
+            }
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Erfolg
+            showStatus('success', result.message || 'Nachricht erfolgreich gesendet!');
+            form.reset();
+            document.getElementById('csrfToken').value = generateCSRFToken();
+          } else {
+            // Fehler
+            showStatus('error', 'Fehler beim Senden:');
+            if (result.errors && Array.isArray(result.errors)) {
+              result.errors.forEach(error => {
+                showStatus('error', '• ' + error, true);
+              });
+            }
+          }
+          
+        } catch (error) {
+          console.error('Form submission error:', error);
+          showStatus('error', 'Netzwerkfehler. Bitte versuchen Sie es später erneut.');
+        } finally {
+          // Button zurücksetzen
+          submitBtn.disabled = false;
+          btnText.style.display = 'inline';
+          btnLoading.style.display = 'none';
+        }
+      });
+      
+      // Status-Nachricht anzeigen
+      function showStatus(type, message, append = false) {
+        if (!append) {
+          formStatus.innerHTML = '';
+        }
+        
+        const div = document.createElement('div');
+        div.textContent = message;
+        
+        if (type === 'success') {
+          formStatus.style.backgroundColor = 'rgba(34, 197, 94, 0.1)';
+          formStatus.style.color = '#22c55e';
+          formStatus.style.border = '1px solid rgba(34, 197, 94, 0.3)';
+        } else {
+          formStatus.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
+          formStatus.style.color = '#ef4444';
+          formStatus.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+        }
+        
+        formStatus.appendChild(div);
+        formStatus.style.display = 'block';
+        
+        // Nach 10 Sekunden ausblenden (nur bei Erfolg)
+        if (type === 'success') {
+          setTimeout(() => {
+            formStatus.style.display = 'none';
+          }, 10000);
+        }
+      }
+      
+      // Fehlermeldungen zurücksetzen
+      function clearErrors() {
+        const errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(element => {
+          element.textContent = '';
+        });
+      }
+      
+      // Client-seitige Validierung (zusätzlich)
+      const inputs = form.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('blur', validateField);
+        input.addEventListener('input', clearFieldError);
+      });
+      
+      function validateField(e) {
+        const field = e.target;
+        const value = field.value.trim();
+        const errorElement = document.getElementById(field.id + '-error');
+        
+        let error = '';
+        
+        if (field.hasAttribute('required') && !value) {
+          error = 'Dieses Feld ist erforderlich.';
+        } else if (field.type === 'email' && value && !isValidEmail(value)) {
+          error = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+        } else if (field.minLength && value.length < field.minLength) {
+          error = `Mindestens ${field.minLength} Zeichen erforderlich.`;
+        } else if (field.maxLength && value.length > field.maxLength) {
+          error = `Maximal ${field.maxLength} Zeichen erlaubt.`;
+        }
+        
+        if (errorElement) {
+          errorElement.textContent = error;
+        }
+        
+        return !error;
+      }
+      
+      function clearFieldError(e) {
+        const field = e.target;
+        const errorElement = document.getElementById(field.id + '-error');
+        if (errorElement) {
+          errorElement.textContent = '';
+        }
+      }
+      
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    });
+
+    // Performance utilities
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
+
+    // Enhanced scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Animate contact info items individually
+          if (entry.target.classList.contains('contact-card')) {
+            const contactInfos = entry.target.querySelectorAll('.contact-info');
+            contactInfos.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('visible');
+              }, index * 150);
+            });
+            
+            // Animate social links
+            const socialLinks = entry.target.querySelectorAll('.social-links a');
+            socialLinks.forEach((link, index) => {
+              setTimeout(() => {
+                link.classList.add('visible');
+              }, 500 + index * 100);
+            });
+          }
+          
+          // Animate form groups individually
+          if (entry.target.classList.contains('contact-form')) {
+            const formGroups = entry.target.querySelectorAll('.form-group');
+            const submitBtn = entry.target.querySelector('.btn-submit');
+            
+            formGroups.forEach((group, index) => {
+              setTimeout(() => {
+                group.classList.add('visible');
+              }, index * 100);
+            });
+            
+            // Animate submit button
+            setTimeout(() => {
+              submitBtn.classList.add('visible');
+            }, formGroups.length * 100 + 200);
+          }
+          
+          // Animate map section elements
+          if (entry.target.classList.contains('map-section')) {
+            const toggleBtns = entry.target.querySelectorAll('.map-toggle-btn');
+            const mapContainer = entry.target.querySelector('.map-container');
+            const directionItems = entry.target.querySelectorAll('.direction-item');
+            
+            // Animate toggle buttons
+            toggleBtns.forEach((btn, index) => {
+              setTimeout(() => {
+                btn.classList.add('visible');
+              }, index * 100);
+            });
+            
+            // Animate map container
+            setTimeout(() => {
+              mapContainer.classList.add('visible');
+            }, 300);
+            
+            // Animate direction items
+            directionItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('visible');
+              }, 600 + index * 150);
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.fade-in, .contact-card, .contact-form, .map-section').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('active');
+      
+      // Prevent body scroll when menu is open
+      if (mobileNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (mobileNav.classList.contains('active') && 
+          !mobileNav.contains(e.target) && 
+          !menuToggle.contains(e.target)) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav.classList.contains('active')) {
+          toggleMobileMenu();
+        }
+      }
+    });
+
+    // Opening hours status
+    function updateOpenStatus() {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTime = hours * 60 + minutes; // Current time in minutes since midnight
+
+      const statusDot = document.getElementById('headerStatusDot');
+      const statusText = document.getElementById('headerStatusText');
+
+      let isOpen = false;
+      let statusMessage = '';
+
+      // Opening hours: Monday 12:00-20:00, Tuesday closed, Wednesday-Sunday 12:00-20:00
+      if (day === 2) { // Tuesday
+        statusMessage = 'Geschlossen';
+        isOpen = false;
+      } else if (day === 1 || (day >= 3 && day <= 7) || day === 0) { // Monday or Wednesday-Sunday
+        const openTime = 12 * 60; // 12:00 in minutes
+        const closeTime = 20 * 60; // 20:00 in minutes
+
+        if (currentTime >= openTime && currentTime < closeTime) {
+          statusMessage = 'Geöffnet';
+          isOpen = true;
+        } else if (currentTime < openTime) {
+          statusMessage = 'Öffnet um 12:00';
+          isOpen = false;
+        } else {
+          statusMessage = 'Geschlossen';
+          isOpen = false;
+        }
+      }
+
+      // Update status indicator
+      if (isOpen) {
+        statusDot.className = 'header-status-dot open';
+        statusText.className = 'header-status-text open';
+      } else {
+        statusDot.className = 'header-status-dot closed';
+        statusText.className = 'header-status-text closed';
+      }
+
+      statusText.textContent = statusMessage;
+    }
+
+    // Update status immediately and then every minute
+    updateOpenStatus();
+    setInterval(updateOpenStatus, 60000);
+  </script>
+</body>
+</html> 
